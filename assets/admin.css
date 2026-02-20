@@ -45,9 +45,16 @@
   content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
+  z-index: 0;
   background: linear-gradient(135deg, rgba(56,132,255,0.08), transparent);
   opacity: 0;
   transition: opacity .2s ease;
+}
+/* Ensure card content stays above overlay */
+.kdr-iaa-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .kdr-iaa-card:hover {
